@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+ 
+ <script src="script.js" language="javascript"></script> 
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-md sticky-top">	 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i class="fas fa-caret-square-down " style="color:#FF0;"></i>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link" href="index.1.html">Ներածություն</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="index.1.html">Հայոց պատմություն</a>
+          </li>
+          <li class="nav-item" >
+          <a class="nav-link" href="galeria.html">Տեսարժան վայրեր</a>
+          </li> 	  
+          <li class="nav-item" >
+          <a class="nav-link" href="ciudad.html">Մարզեր</a>
+          </li> 
+          <li class="nav-item" >
+            <a class="nav-link" href="contact.html">Նամակագրություն</a>
+            </li> 		  
+          </ul>          
+          </div> 
+
+          <img src="img/gerb.jpg" alt="ՀԱՅԱՍՏԱՆ" style="width:5%">
+
+
+            </nav>
+
+
+<section><br><br><br>
+
+    <h3>Նամակագրություն:</h3><br>
+
+    <form name="formulario" >
+        <h3>Անձնական տվյալներ:</h3><br>
+        <!-------------------- NOMBRE --------------------------------->
+        <div class="left1">
+            <label for="nombre">Անուն</label>
+        </div>
+        <div class="right1">
+            <input type="text" name="nombre"/>
+        </div>
+        <div class="rompedor"></div>
+        <!-------------------- APELLIDOS --------------------------------->
+        <div class="left1">
+            <label for="apellidos">Ազգանուն</label>
+        </div>
+        <div class="right1">
+            <input type="text" name="apellidos"/>
+        </div>
+        <div class="rompedor"></div>
+        <!-------------------- Edad --------------------------------->
+        <div class="left1">
+            <label for="edad">Տարիք</label>
+        </div>
+        <div class="right1">
+            <input type="number" name="edad" onchange="calcular()"/>
+        </div>
+        <div class="rompedor"></div>
+       <!-------------------- Sexo --------------------------------->
+        <div class="left1">
+            <label for="sexo">Սեռը</label>
+        </div>
+        <div class="right1">
+            <input type="radio" name="genero" id="hombre" value="hombre" checked  onchange="calcular()"/>
+            <label for="hombre">Տղամարդ</label>
+            <input type="radio" name="genero" id="mujer" value="mujer"  onchange="calcular()"/>
+            <label for="mujer">Կին</label>
+        </div>
+        <div class="rompedor"></div> 
+       <!-------------------- Poblacion --------------------------------->
+        <div class="left1">
+            <label for="poblacion">Մարզեր</label>
+        </div>
+        <div class="right1">
+            <select name="poblacion">
+                <option value="be">Սյունիք</option>
+                <option value="al">Շիրակ</option>
+                <option value="vi">Արցախ</option>
+                <option value="af">Արագածոտնի</option>
+                <option value="be">Գեղարքւնիքի</option>
+                <option value="al">Լոռի</option>
+                <option value="vi">Կոտայք</option>
+                <option value="af">Արմավիր</option>
+                <option value="be">Տավուշ</option>
+                <option value="al">Արարատ</option>
+                <option value="vi">Վայոց Ձոր</option>
+               
+            </select
+        ></div>
+        <div class="rompedor"></div> 
+        <div class="rompedor"></div>
+        <h3>Այլ տեղեկություններ:</h3>
+        <!-------------------- Extras --------------------------------->
+        <div class="left2">
+            <input type="checkbox" name="casada"  onchange="calcular()"/>
+            <label for="entrenador">Ամուսնացած ես</label>
+        </div>
+        <div class="right2">
+            <input type="checkbox" name="coche"  onchange="calcular()"/>
+            <label for="spa">Վարորդական իրավունք</label>
+        </div>
+        <div class="rompedor"></div> 
+        <div class="left2">
+            <input type="checkbox" name="dosnacionalidad"  onchange="calcular()"/>
+            <label for="kickboxing">Երկքաղաքացիություն</label>
+        </div>
+        <div class="right2">
+            <input type="checkbox" name="zumba" onchange="calcular()"/>
+            <label for="zumba">Հոբի</label>
+        </div>
+        <div class="rompedor"></div>  
+        <!-------------------- Enviar y precio --------------------------------->
+        <input type="button" value="Enviar" onclick="enviar()" />
+    <div class="rompedor"></div>
+    <label for="precio">Precio</label>
+    <input type="text" id="precio" name="precio" disabled/>
+    <a href="javascript:calcular()" title="Actualizar precio">Actualizar Precio</a>      
+        
+    </form>
+    </section><br><br><br>
+
+    <footer style="background-color:rgb(255,153,0)" >
+        <div class="container-fluid">
+         <div class="row " >
+           <div class=" col-sm-8">                   
+             
+           <div style="float:left;color:#2c2ffc"><h4><strong>ՀԱՅԱՍՏԱՆ</strong></h4>             
+               
+               <h5 style="color:#2c2ffc">Copy writer--LianGrig  2021 </h5>
+               </div>    
+             
+               </div> <hr>     
+                <div class=" col-sm-4 logo"> 
+      
+                  <div style="float:right;" class="d-none d-sm-block">
+                    <div class="icono"><i class="fab whatts fa-whatsapp "></i>
+                        <i class="fab facebook fa-facebook "></i>
+                          <i class="fab fa-instagram "></i>            
+                        </div>          
+                    </div>
+      
+               <div style="clear:both"></div> 
+             </div>	
+        </div> 
+         </footer>
+      
+      
+                  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
