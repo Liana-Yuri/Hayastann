@@ -55,7 +55,7 @@ function calcular(){
   document.formulario.precio.value = precio + "€";	
 }
 function enviar(){
-  var repuesta,precio;
+  let  repuesta,precio;
   precio = document.formulario.precio.value;
   respuesta = confirm("Su precio es " + precio + "\n¿Desea continuar?");
   if(respuesta == true){
