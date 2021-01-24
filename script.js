@@ -24,7 +24,7 @@ for (let i = 0; i < acc.length; i++) {
 
 
 function calcular(){
-  let edad,genero;precio; 
+  let edad,genero;precio;dosnacionalidad; 
  
 		precio = 100;
 		//Miramos el genero
